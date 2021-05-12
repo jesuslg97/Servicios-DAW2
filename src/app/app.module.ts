@@ -9,6 +9,7 @@ import { SonAComponent } from './son-a/son-a.component';
 import { SonBComponent } from './son-b/son-b.component';
 import { GrandSonAComponent } from './grand-son-a/grand-son-a.component';
 import { GrandSonBComponent } from './grand-son-b/grand-son-b.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GrandSonBComponent } from './grand-son-b/grand-son-b.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
