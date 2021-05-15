@@ -1,3 +1,8 @@
-<mat-toolbar color="primary" class="row text-center">
+<mat-toolbar fxLayout="row" color="primary" class="row text-center">
   <span>Servicios - Enrutamiento</span>
+
+  <div class="mt-1">
+    <button mat-button fxShow.xs=false fxShow.sm=false [routerLink]="['/father']">Hijos</button>
+    <button mat-button fxShow.xs=true [routerLink]="['/son-list']">Nietos</button>
+  </div>
 </mat-toolbar>

@@ -1,5 +1,8 @@
 <div class="col-md-12 mt-3" style="margin-right: 20px">
   <h4>Componente hijo A</h4>
+
+  Escribe aquí <br>
+  <textarea (input)="changeText($event.target.value)" [(ngModel)]="message">
+</textarea>
 </div>
 
-<app-grand-son-a></app-grand-son-a>
