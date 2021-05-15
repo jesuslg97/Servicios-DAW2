@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ComunicationService} from '../services/comunication.service';
 
 @Component({
   selector: 'app-father',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FatherComponent implements OnInit {
 
-  constructor() { }
+  message: string;
+
+  constructor(public cs: ComunicationService) { }
 
   ngOnInit(): void {
+  }
+
+  getChange() {
+    this.message = this.cs.message;
   }
 
 }

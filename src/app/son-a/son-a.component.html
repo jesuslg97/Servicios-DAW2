@@ -1,8 +1,9 @@
-<div class="col-md-12 mt-3" style="margin-right: 20px">
+<div class="col-md-12 mt-5" style="margin-right: 20px">
   <h4>Componente hijo A</h4>
 
   Escribe aquí <br>
-  <textarea (input)="changeText($event.target.value)" [(ngModel)]="message">
-</textarea>
+  <textarea (input)="changeText($event.target.value)" [(ngModel)]="message"
+            style="width: 270px; height: 200px">
+  </textarea>
 </div>
 
