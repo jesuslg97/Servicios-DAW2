@@ -1,9 +1,18 @@
 <div class="col-md-12 mt-5">
   <h4>Componente nieto B</h4>
 
+  <mat-form-field appearance="fill">
+    <mat-label>Color de la letra</mat-label>
+    <mat-select [(ngModel)]="color">
+      <mat-option  *ngFor="let color of colors" [value]="color" (click)="changeColor(color)">
+        {{color}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
   Escribe aquí <br>
   <textarea (input)="changeText($event.target.value)" [(ngModel)]="message"
-            style="width: 270px; height: 200px">
+            style="width: 270px; height: 200px" [style.color]="color">
   </textarea>
 
 </div>

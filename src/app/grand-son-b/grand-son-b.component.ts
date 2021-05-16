@@ -11,6 +11,16 @@ export class GrandSonBComponent implements OnInit {
 
   message: string;
 
+  colors: string[] = [
+    'Red',
+    'Yellow',
+    'Green',
+    'Brown',
+    'Blue'
+  ];
+
+  color: string;
+
   constructor(private cs: ComunicationService) { }
 
   ngOnInit(): void {
@@ -21,6 +31,10 @@ export class GrandSonBComponent implements OnInit {
 
   changeText(message: string) {
     this.cs.sendMessage(message);
+  }
+
+  changeColor(value){
+    this.color = value;
   }
 
 }

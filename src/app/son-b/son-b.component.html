@@ -2,6 +2,23 @@
   <h4>Componente hijo B</h4>
 
   Escribe aquí <br>
+  <mat-button-toggle-group #group="matButtonToggleGroup">
+    <mat-button-toggle value="left" aria-label="Text align left">
+      <mat-icon>format_align_left</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="center" aria-label="Text align center">
+      <mat-icon>format_align_center</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="right" aria-label="Text align right">
+      <mat-icon>format_align_right</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+      <mat-icon>format_align_justify</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+  <div class="example-selected-value">Selected value: {{group.value}}</div>
+
+
   <textarea (input)="changeText($event.target.value)" [(ngModel)]="message"
             style="width: 270px; height: 200px">
   </textarea>

@@ -17,6 +17,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { SonListComponent } from './son-list/son-list.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -29,15 +35,21 @@ import { SonListComponent } from './son-list/son-list.component';
     ToolbarComponent,
     SonListComponent
   ],
-    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      FormsModule,
-      MatToolbarModule,
-      FlexLayoutModule,
-      MatButtonModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatOptionModule,
+    MatSelectModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

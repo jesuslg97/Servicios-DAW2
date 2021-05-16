@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {ComunicationService} from '../services/comunication.service';
+
+import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-grand-son-a',
@@ -21,6 +23,15 @@ export class GrandSonAComponent implements OnInit {
 
   changeText(message: string) {
     this.cs.sendMessage(message);
+  }
+
+  fontSize = 14;
+  @ViewChild('para', {static: true}) para: ComunicationService;
+
+
+  changeFont(operator){
+    operator === '+' ? this.fontSize++ : this.fontSize--;
+    document.getElementsByTagName('textarea')[0].style.fontSize = `${this.fontSize}px`;
   }
 
 }

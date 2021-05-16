@@ -5,6 +5,7 @@ import { FatherComponent } from './father/father.component';
 import { SonListComponent } from './son-list/son-list.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'father' },
   { path: 'father', component: FatherComponent },
   { path: 'son-list', component: SonListComponent }
 ];

@@ -1,8 +1,12 @@
 <div class="col-md-12 mt-5" style="margin-right: 20px">
   <h4>Componente nieto A</h4>
 
+  <button (click)="changeFont('+')" class="font-control">A<sup>+</sup></button>
+  <button (click)="changeFont('-')" class="font-control">A<sup>-</sup></button>
+
   Escribe aquí <br>
   <textarea (input)="changeText($event.target.value)" [(ngModel)]="message"
             style="width: 270px; height: 200px">
   </textarea>
+
 </div>
