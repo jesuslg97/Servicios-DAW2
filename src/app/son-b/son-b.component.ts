@@ -10,6 +10,17 @@ export class SonBComponent implements OnInit {
 
   message: string;
 
+  colors: string[] = [
+    'Black',
+    'Red',
+    'Yellow',
+    'Green',
+    'Brown',
+    'Blue'
+  ];
+
+  color: string;
+
   constructor(private cs: ComunicationService) { }
 
   ngOnInit(): void {
@@ -20,6 +31,10 @@ export class SonBComponent implements OnInit {
 
   changeText(message: string) {
     this.cs.sendMessage(message);
+  }
+
+  changeColor(value){
+    this.color = value;
   }
 
 }

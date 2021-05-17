@@ -1,4 +1,4 @@
-<div class="col-md-12 mt-5">
+<div class="col-md-12 mt-5 text-center">
   <h4>Componente nieto B</h4>
 
   <mat-form-field appearance="fill">
@@ -10,7 +10,8 @@
     </mat-select>
   </mat-form-field>
 
-  Escribe aquí <br>
+  <br>
+
   <textarea (input)="changeText($event.target.value)" [(ngModel)]="message"
             style="width: 270px; height: 200px" [style.color]="color">
   </textarea>

@@ -12,6 +12,7 @@ export class GrandSonBComponent implements OnInit {
   message: string;
 
   colors: string[] = [
+    'Black',
     'Red',
     'Yellow',
     'Green',
