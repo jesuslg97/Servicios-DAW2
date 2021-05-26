@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ComunicationService} from '../services/comunication.service';
 
 @Component({
@@ -8,20 +8,20 @@ import {ComunicationService} from '../services/comunication.service';
 })
 export class SonBComponent implements OnInit {
 
+  constructor(private cs: ComunicationService) { }
+
   message: string;
 
-  colors: string[] = [
-    'Black',
-    'Red',
-    'Yellow',
-    'Green',
-    'Brown',
-    'Blue'
+  colorFont: string[] = [
+    'lightcoral',
+    'lightgreen',
+    'lightpink',
+    'lightgray',
+    'lightsalmon',
+    'White'
   ];
 
   color: string;
-
-  constructor(private cs: ComunicationService) { }
 
   ngOnInit(): void {
     this.cs.sendMessageObservable.subscribe(response => {
@@ -33,8 +33,16 @@ export class SonBComponent implements OnInit {
     this.cs.sendMessage(message);
   }
 
-  changeColor(value){
+  changeColorFont(value){
     this.color = value;
+  }
+
+  fontSize = 14;
+  @ViewChild('para', {static: true}) para: ComunicationService;
+
+  changeFont(operator){
+    operator === '+' ? this.fontSize++ : this.fontSize--;
+    document.getElementsByTagName('textarea')[0].style.fontSize = `${this.fontSize}px`;
   }
 
 }

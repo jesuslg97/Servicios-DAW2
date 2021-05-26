@@ -10,6 +10,17 @@ export class SonAComponent implements OnInit {
 
   message: string;
 
+  colorFont: string[] = [
+    'lightcoral',
+    'lightgreen',
+    'lightpink',
+    'lightgray',
+    'lightsalmon',
+    'White'
+  ];
+
+  color: string;
+
   constructor(private cs: ComunicationService) { }
 
   ngOnInit(): void {
@@ -22,9 +33,12 @@ export class SonAComponent implements OnInit {
     this.cs.sendMessage(message);
   }
 
+  changeColorFont(value){
+    this.color = value;
+  }
+
   fontSize = 14;
   @ViewChild('para', {static: true}) para: ComunicationService;
-
 
   changeFont(operator){
     operator === '+' ? this.fontSize++ : this.fontSize--;

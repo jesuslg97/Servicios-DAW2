@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 import {ComunicationService} from '../services/comunication.service';
 
@@ -11,13 +11,13 @@ export class GrandSonBComponent implements OnInit {
 
   message: string;
 
-  colors: string[] = [
-    'Black',
-    'Red',
-    'Yellow',
-    'Green',
-    'Brown',
-    'Blue'
+  colorFont: string[] = [
+    'lightcoral',
+    'lightgreen',
+    'lightpink',
+    'lightgray',
+    'lightsalmon',
+    'White'
   ];
 
   color: string;
@@ -34,8 +34,17 @@ export class GrandSonBComponent implements OnInit {
     this.cs.sendMessage(message);
   }
 
-  changeColor(value){
+  changeColorFont(value){
     this.color = value;
+  }
+
+  fontSize = 14;
+  @ViewChild('para', {static: true}) para: ComunicationService;
+
+
+  changeFont(operator){
+    operator === '+' ? this.fontSize++ : this.fontSize--;
+    document.getElementsByTagName('textarea')[0].style.fontSize = `${this.fontSize}px`;
   }
 
 }

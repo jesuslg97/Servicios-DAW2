@@ -1,21 +1,34 @@
 <div class="col-md-12 mt-5 text-center">
-  <h4>Componente nieto A</h4>
 
-  <div class="text-center">
-    <p>Tamaño de la letra</p>
-    <button (click)="changeFont('+')" class="btn-md mat-raised-button mat-accent" style="margin-right: 10px">
-      Aumentar<sup>+</sup>
-    </button>
+  <mat-form-field appearance="fill">
+    <mat-label>Color de fondo</mat-label>
+    <mat-select [(ngModel)]="color">
+      <mat-option  *ngFor="let color of colorFont" [value]="color" (click)="changeColorFont(color)">
+        {{color}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
-    <button (click)="changeFont('-')" class="btn-md mat-raised-button mat-primary">
-      Disminuir<sup>-</sup>
-    </button>
+  <div class="tamano" id="fondo" [style.background-color]="color" >
+    <h4>Componente nieto A</h4>
+
+    <div class="text-center">
+      <p>Tamaño de la letra</p>
+      <button (click)="changeFont('+')" class="btn-md mat-raised-button mat-accent" style="margin-right: 10px">
+        Aumentar<sup>+</sup>
+      </button>
+
+      <button (click)="changeFont('-')" class="btn-md mat-raised-button mat-primary">
+        Disminuir<sup>-</sup>
+      </button>
+    </div>
+
+    <br>
+
+    <textarea (input)="changeText($event.target.value)" [(ngModel)]="message"
+              style="width: 270px; height: 200px">
+    </textarea>
   </div>
 
-  <br>
-
-  <textarea (input)="changeText($event.target.value)" [(ngModel)]="message"
-            style="width: 270px; height: 200px">
-  </textarea>
-
 </div>
+

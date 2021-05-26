@@ -13,6 +13,17 @@ export class GrandSonAComponent implements OnInit {
 
   message: string;
 
+  colorFont: string[] = [
+    'lightcoral',
+    'lightgreen',
+    'lightpink',
+    'lightgray',
+    'lightsalmon',
+    'White'
+  ];
+
+  color: string;
+
   constructor(private cs: ComunicationService) { }
 
   ngOnInit(): void {
@@ -23,6 +34,10 @@ export class GrandSonAComponent implements OnInit {
 
   changeText(message: string) {
     this.cs.sendMessage(message);
+  }
+
+  changeColorFont(value){
+    this.color = value;
   }
 
   fontSize = 14;
