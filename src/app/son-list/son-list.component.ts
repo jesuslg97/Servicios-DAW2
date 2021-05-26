@@ -4,7 +4,7 @@ import {ComunicationService} from '../services/comunication.service';
 @Component({
   selector: 'app-son-list',
   templateUrl: './son-list.component.html',
-  styleUrls: ['./son-list.component.scss']
+  styleUrls: ['../app.component.scss']
 })
 export class SonListComponent implements OnInit {
 

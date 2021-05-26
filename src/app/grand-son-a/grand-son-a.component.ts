@@ -7,7 +7,7 @@ import { ViewChild } from '@angular/core';
 @Component({
   selector: 'app-grand-son-a',
   templateUrl: './grand-son-a.component.html',
-  styleUrls: ['./grand-son-a.component.scss']
+  styleUrls: ['../app.component.scss']
 })
 export class GrandSonAComponent implements OnInit {
 

@@ -4,7 +4,7 @@ import {ComunicationService} from '../services/comunication.service';
 @Component({
   selector: 'app-son-b',
   templateUrl: './son-b.component.html',
-  styleUrls: ['./son-b.component.scss']
+  styleUrls: ['../app.component.scss']
 })
 export class SonBComponent implements OnInit {
 

@@ -4,7 +4,7 @@ import {ComunicationService} from '../services/comunication.service';
 @Component({
   selector: 'app-father',
   templateUrl: './father.component.html',
-  styleUrls: ['./father.component.scss']
+  styleUrls: ['../app.component.scss']
 })
 export class FatherComponent implements OnInit {
 
