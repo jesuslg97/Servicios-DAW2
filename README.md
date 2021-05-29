@@ -1,27 +1,46 @@
-# Servicios
+# Servicios - Aspectos técnicos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
+Versión de Angular empleada ==> 11.2.10
 
-## Development server
+Versión de Node empleada ==> 14.15.1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+-----------------------------------------------------------------------------------
+El proyecto dispone de 7 componentes y 1 servicio:
 
-## Code scaffolding
+  •	Componentes:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   o	ToolBar ==> Almacena todo el código relacionado con la barra de navegación.
 
-## Build
+   o	Father ==> Almacena todo el código relacionado con el envío de los mensajes de los hijos.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+   o	Son-a ==> Almacena todo el código relacionado con los mensajes del hijo A, donde se puede aumentar y 
+   disminuar el tamaño de la letra, además de cambiar el color de fondo.
+   
+   o	Son-B ==> Almacena todo el código relacionado con los mensajes del hijo B, donde se puede aumentar y 
+   disminuar el tamaño de la letra, además de cambiar el color de fondo.
 
-## Running unit tests
+   o	Son-list ==> Almacena todo el código relacionado con el envío de los mensajes de los nietos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   o	Grand-Son-a ==> Almacena todo el código relacionado con los mensajes del nieto A, donde se puede aumentar y 
+   disminuar el tamaño de la letra, además de cambiar el color de fondo.
+   
+   o	Grand-Son-B ==> Almacena todo el código relacionado con los mensajes del nieto B, donde se puede aumentar y 
+   disminuar el tamaño de la letra, además de cambiar el color de fondo.
 
-## Running end-to-end tests
+----------------------------------------------------------------------------
+  
+  •	Servicio:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+   o	Almacena todo el código relacionado con el correcto envío de mensaje entre componentes hijos y nietos.
 
-## Further help
+----------------------------------------------------------------------------
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Angular Material
+Con respecto a la librería de Angular Material, he usado los siguientes componentes:
+
+1.	MatToolbarModule ==> Para la barra de navegación.
+2.	MatIconModule ==> Para los iconos de la barra de navegación.
+3.	MatButtonModule ==> Para los botones de todas las páginas de la app.
+4.	MatOptionModule ==> Para los options de los selectores.
+5.	MatSelectModule ==> Para el estilo y uso de selectores.
+
